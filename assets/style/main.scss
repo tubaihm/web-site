@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+// 単位変換関数
+
+@function vw($px) {
+    @return calc($px * 100vw / 390); // 390pxはカンプの幅を記述
+}
+
+@function vwPC($px) {
+    @return calc($px * 100vw / 1400); // 1536pxはカンプの幅を記述
+}
+
+@function px2Rem($px) {
+    @return calc($px / 16) * 1rem;
+}
+
+@function min($values...) {
+    @return unquote('min(#{$values})');
+}
+
+@function max($values...) {
+    @return unquote('max(#{$values})');
+}
+
+@function mvw($px) {
+    $value1: calc($px * 100vw / 1200);
+    $value2: px2Rem($px);
+
+    @if $px >=0 {
+        @return min($value1, $value2);
+    }
+
+    @else {
+        @return max($value1, $value2);
+    }
+}
+
+// メディアクエリ
+$breakpoints: (
+    "md": "screen and (min-width: 768px)",
+    ) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+// レイアウト
+/* ページ全体のスタイル ----------*/
+body {
+    font-family: "Noto Sans JP",
+        sans-serif;
+    line-height: 1.75;
+    color: #000;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+li {
+    list-style: none;
+}
+
+/* 部品 ----------*/
+.section-title {
+    text-align: center;
+
+    &__head {
+        display: block;
+        font-family: "Montserrat",
+            sans-serif;
+        font-size: vw(16
+        );
+    font-weight: 600;
+    color: #168352;
+}
+
+&__heading {
+    display: block;
+    font-size: vw(20);
+    font-weight: 700;
+}
+}
+
+/* ヘッダー ----------*/
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: vw(63);
+    background-color: #fff;
+    z-index: 100;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 vw(16);
+    }
+
+    &__logo {
+        position: relative;
+        bottom: vw(13);
+    }
+
+    &__logo-image {
+        width: vw(197);
+    }
+
+    &__button {
+        position: relative;
+        bottom: vw(1);
+    }
+
+    &__button-image {
+        width: vw(24);
+    }
+
+    &__menu {
+        position: fixed;
+        top: vw(63);
+        width: vw(358);
+        margin: 0 auto;
+        background-color: #168352;
+        border-radius: vw(24);
+        visibility: hidden;
+    }
+
+    &__menu-list {
+        text-align: center;
+    }
+
+    &__menu-list-item {
+        font-size: vw(18);
+    }
+}
+
+/* カバー ----------*/
+.cover {
+    margin-top: vw(63);
+
+    &__container {
+        margin: 0 vw(16);
+    }
+
+    &__wrapper {
+        margin-top: vw(72);
+        margin-bottom: vw(26);
+    }
+
+    &__catch {
+        margin-bottom: vw(15);
+        font-size: vw(28);
+        font-weight: 700;
+    }
+
+    &__text {
+        font-size: vw(15);
+    }
+
+    &__image {
+        width: 100%;
+    }
+}
+
+
+/* 会社概要 ----------*/
+.about-us {
+
+    &__container{
+        background-image: url("/assets/image/top/about/about_us.jpg");
+    }
+
+    &__wrapper {
+        margin: vw(32) vw(16);
+        background-color: #fff;
+
+    }
+}
