@@ -36,6 +36,7 @@ li {
   display: block;
   font-size: 5.1282051282vw;
   font-weight: 700;
+  line-height: 1.25;
 }
 
 /* ヘッダー ----------*/
@@ -85,6 +86,7 @@ li {
 /* カバー ----------*/
 .cover {
   margin-top: 16.1538461538vw;
+  padding-bottom: 12.3076923077vw;
 }
 .cover__container {
   margin: 0 4.1025641026vw;
@@ -107,9 +109,210 @@ li {
 
 /* 会社概要 ----------*/
 .about-us__container {
+  margin-top: 5.641025641vw;
+  padding: 8.2051282051vw 4.1025641026vw;
   background-image: url("/assets/image/top/about/about_us.jpg");
+  background-size: cover;
 }
 .about-us__wrapper {
-  margin: 8.2051282051vw 4.1025641026vw;
+  padding: 3.8461538462vw 6.1538461538vw 4.6153846154vw;
+  color: #111;
+  background-color: #fff;
+  border-radius: 8.2051282051vw;
+  opacity: 0.8;
+}
+.about-us__inner-top {
+  margin-bottom: 1.7948717949vw;
+  font-size: 4.6153846154vw;
+  font-weight: 700;
+}
+.about-us__inner-text {
+  font-size: 3.8461538462vw;
+}
+
+/* 特徴 ----------*/
+.features {
+  padding-top: 12.0512820513vw;
+  padding-bottom: 9.2307692308vw;
+  background-color: #f3f9f6;
+}
+.features__container {
+  margin-top: 5.641025641vw;
+}
+.features__unit {
+  margin: 0 auto 4.8717948718vw;
+  width: 91.7948717949vw;
+  background-color: #fff;
+  border-radius: 6.1538461538vw;
+}
+.features__image {
+  width: 100%;
+  height: 51.5384615385vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6.1538461538vw 6.1538461538vw 0 0;
+}
+.features__text {
+  padding: 3.0769230769vw 4.1025641026vw 3.5897435897vw;
+  font-size: 4.6153846154vw;
+  font-weight: 700;
+  color: #111;
+}
+
+/* 製品・サービス紹介 ----------*/
+.products-service {
+  padding-top: 12.5641025641vw;
+  padding-bottom: 8.9743589744vw;
+}
+.products-service__container {
+  margin: 5.641025641vw auto;
+  width: 91.7948717949vw;
+}
+.products-service__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5.1282051282vw;
+}
+.products-service__list-item {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 4.358974359vw;
+       column-gap: 4.358974359vw;
+  padding: 5.1282051282vw 6.1538461538vw;
+  background-color: #168352;
+  border-radius: 6.1538461538vw;
+}
+.products-service__image {
+  width: 25.641025641vw;
+  height: 25.641025641vw;
+}
+.products-service__text {
+  font-size: 4.6153846154vw;
+  font-weight: 700;
+  color: #fff;
+}
+.products-service__text--br {
+  display: inline-block;
+}
+
+/* 事例紹介 ----------*/
+.case {
+  padding-top: 11.7948717949vw;
+  padding-bottom: 5.641025641vw;
+  background-color: #f3f9f6;
+}
+.case__container {
+  margin: 5.641025641vw auto 0;
+  width: 91.7948717949vw;
+}
+.case__unit {
+  margin-bottom: 6.9230769231vw;
+}
+.case__unit:nth-child(2) {
+  margin-bottom: 6.1538461538vw;
+}
+.case__image {
+  width: 100%;
+}
+.case__text {
+  margin-top: 2.0512820513vw;
+  margin-left: 0.5128205128vw;
+  font-size: 4.6153846154vw;
+  font-weight: 700;
+  color: #09947b;
+}
+
+/* お知らせ ----------*/
+.news {
+  padding-top: 12.3076923077vw;
+  padding-bottom: 15.8974358974vw;
+}
+.news__container {
+  margin: 5.641025641vw auto 0;
+  width: 91.7948717949vw;
+}
+.news__list-item {
+  border-top: #ddd solid 0.2564102564vw;
+  padding-bottom: 2.5641025641vw;
+}
+.news__list-item:first-child {
+  padding-bottom: 2.3076923077vw;
+}
+.news__list-item:first-child__list-category {
+  padding-bottom: 0.5128205128vw;
+}
+.news__list-item:nth-child(5) {
+  padding-bottom: 2.3076923077vw;
+}
+.news__list-item:last-child {
+  padding-bottom: 2.8205128205vw;
+  border-bottom: #ddd solid 0.2564102564vw;
+}
+.news__list-head {
+  display: flex;
+  -moz-column-gap: 4.358974359vw;
+       column-gap: 4.358974359vw;
+  padding-top: 3.5897435897vw;
+}
+.news__list-date {
+  font-size: 3.8461538462vw;
+  color: #222;
+}
+.news__list-category {
+  margin-top: 0.5128205128vw;
+  padding-top: 0.7692307692vw;
+  padding-bottom: 0.5128205128vw;
+  width: 34.358974359vw;
+  text-align: center;
+  font-size: 3.3333333333vw;
+  color: #fff;
+  background-color: #473221;
+  border-radius: 1.0256410256vw;
+}
+.news__list-text {
+  margin: 2.3076923077vw 0.2564102564vw 0;
+  font-size: 3.8461538462vw;
+  font-weight: 700;
+  color: #09947b;
+}
+.news__button {
+  margin: 6.1538461538vw auto 0;
+  padding-top: 4.358974359vw;
+  padding-bottom: 4.358974359vw;
+  width: 76.9230769231vw;
+  text-align: center;
+  font-size: 4.6153846154vw;
+  font-weight: 700;
+  color: #fff;
+  background-color: #09947b;
+  border-radius: 8.4615384615vw;
+  box-shadow: 0 1.2820512821vw 0 0 #066655;
+}
+
+/* フッター ----------*/
+.footer {
+  padding-top: 5.641025641vw;
+  padding-bottom: 5.8974358974vw;
+  background-color: #168352;
+}
+.footer__container {
+  margin: 0 auto;
+  width: 58.9743589744vw;
+}
+.footer__menu-list {
+  display: flex;
+  justify-content: center;
+  -moz-column-gap: 1.5384615385vw;
+       column-gap: 1.5384615385vw;
+  font-size: 3.3333333333vw;
+  color: #fff;
+}
+.footer__menu-bar {
+  content: "";
+  margin-top: 2.8205128205vw;
+  margin-left: 0.5128205128vw;
+  width: 5.1282051282vw;
+  height: 0.2564102564vw;
+  transform: rotate(90deg);
   background-color: #fff;
 }/*# sourceMappingURL=main.css.map */

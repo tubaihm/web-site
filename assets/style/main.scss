@@ -88,6 +88,7 @@ li {
     display: block;
     font-size: vw(20);
     font-weight: 700;
+    line-height: 1.25;
 }
 }
 
@@ -146,6 +147,7 @@ li {
 /* カバー ----------*/
 .cover {
     margin-top: vw(63);
+    padding-bottom: vw(48);
 
     &__container {
         margin: 0 vw(16);
@@ -175,13 +177,251 @@ li {
 /* 会社概要 ----------*/
 .about-us {
 
-    &__container{
+    &__container {
+        margin-top: vw(22);
+        padding: vw(32) vw(16);
         background-image: url("/assets/image/top/about/about_us.jpg");
+        background-size: cover;
     }
 
     &__wrapper {
-        margin: vw(32) vw(16);
+        padding: vw(15) vw(24) vw(18);
+        color: #111;
         background-color: #fff;
+        border-radius: vw(32);
+        opacity: .8;
+    }
 
+    &__inner-top {
+        margin-bottom: vw(7);
+        font-size: vw(18);
+        font-weight: 700;
+    }
+
+    &__inner-text {
+        font-size: vw(15);
+    }
+}
+
+
+/* 特徴 ----------*/
+.features {
+    padding-top: vw(47);
+    padding-bottom: vw(36);
+    background-color: #f3f9f6;
+
+    &__container {
+        margin-top: vw(22);
+    }
+
+    &__unit {
+        margin: 0 auto vw(19);
+        width: vw(358);
+        background-color: #fff;
+        border-radius: vw(24);
+    }
+
+    &__image {
+        width: 100%;
+        height: vw(201);
+        object-fit: cover;
+        border-radius: vw(24) vw(24) 0 0;
+    }
+
+    &__text {
+        padding: vw(12) vw(16) vw(14);
+        font-size: vw(18);
+        font-weight: 700;
+        color: #111;
+    }
+}
+
+
+/* 製品・サービス紹介 ----------*/
+.products-service {
+    padding-top: vw(49);
+    padding-bottom: vw(35);
+
+    &__container {
+        margin: vw(22) auto;
+        width: vw(358);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        row-gap: vw(20);
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+        column-gap: vw(17);
+        padding: vw(20) vw(24);
+        background-color: #168352;
+        border-radius: vw(24);
+    }
+
+    &__image {
+        width: vw(100);
+        height: vw(100);
+    }
+
+    &__text {
+        font-size: vw(18);
+        font-weight: 700;
+        color: #fff;
+
+        &--br {
+            display: inline-block;
+        }
+    }
+}
+
+
+/* 事例紹介 ----------*/
+.case {
+    padding-top: vw(46);
+    padding-bottom: vw(22);
+    background-color: #f3f9f6;
+
+    &__container {
+        margin: vw(22) auto 0;
+        width: vw(358);
+    }
+
+    &__unit {
+        margin-bottom: vw(27);
+
+        &:nth-child(2) {
+            margin-bottom: vw(24);
+        }
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__text {
+        margin-top: vw(8);
+        margin-left: vw(2);
+        font-size: vw(18);
+        font-weight: 700;
+        color: #09947b;
+    }
+}
+
+
+/* お知らせ ----------*/
+.news {
+    padding-top: vw(48);
+    padding-bottom: vw(62);
+
+    &__container {
+        margin: vw(22) auto 0;
+        width: vw(358);
+    }
+
+    &__list {}
+
+    &__list-item {
+        border-top: #ddd solid vw(1);
+        padding-bottom: vw(10);
+
+        &:first-child {
+            padding-bottom: vw(9);
+
+            &__list-category {
+                padding-bottom: vw(2);
+            }
+        }
+
+        &:nth-child(5){
+            padding-bottom: vw(9);
+        }
+
+
+        &:last-child {
+            padding-bottom: vw(11);
+            border-bottom: #ddd solid vw(1);
+        }
+    }
+
+    &__list-head {
+        display: flex;
+        column-gap: vw(17);
+        padding-top: vw(14);
+    }
+
+    &__list-date {
+        font-size: vw(15);
+        color: #222;
+    }
+
+    &__list-category {
+        margin-top: vw(2);
+        padding-top: vw(3);
+        padding-bottom: vw(2);
+        width: vw(134);
+        text-align: center;
+        font-size: vw(13);
+        color: #fff;
+        background-color: #473221;
+        border-radius: vw(4);
+    }
+
+    &__list-text {
+        margin: vw(9) vw(1) 0;
+        font-size: vw(15);
+        font-weight: 700;
+        color: #09947b;
+    }
+
+    &__button{
+        margin: vw(24) auto 0;
+        padding-top: vw(17);
+        padding-bottom: vw(17);
+        width: vw(300);
+        text-align: center;
+        font-size: vw(18);
+        font-weight: 700;
+        color: #fff;
+        background-color: #09947b;
+        border-radius: vw(33);
+        box-shadow: 0 vw(5) 0 0 #066655;
+    }
+}
+
+
+/* フッター ----------*/
+.footer{
+    padding-top: vw(22);
+    padding-bottom: vw(23);
+    background-color: #168352;
+
+    &__container{
+        margin: 0 auto;
+        width: vw(230);
+    }
+
+    &__menu{
+    }
+
+    &__menu-list{
+        display: flex;
+        justify-content: center;
+        column-gap: vw(6);
+        font-size: vw(13);
+        color: #fff;
+    }
+
+    &__menu-bar{
+        content: "";
+        margin-top: vw(11);
+        margin-left: vw(2);
+        width: vw(20);
+        height: vw(1);
+        transform: rotate(90deg);
+        background-color: #fff;
     }
 }
