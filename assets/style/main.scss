@@ -100,16 +100,20 @@ li {
     height: vw(63);
     background-color: #fff;
     z-index: 100;
+    @include mq{
+        height: mvw(114);
+    }
 
     &__container {
         display: flex;
         justify-content: space-between;
         padding: 0 vw(16);
+        @include mq{
+            padding: 0 mvw(32);
+        }
     }
 
     &__logo {
-        position: relative;
-        bottom: vw(13);
     }
 
     &__logo-image {
@@ -117,12 +121,13 @@ li {
     }
 
     &__button {
-        position: relative;
-        bottom: vw(1);
     }
 
     &__button-image {
         width: vw(24);
+        @include mq{
+            display: none;
+        }
     }
 
     &__menu {
@@ -133,6 +138,12 @@ li {
         background-color: #168352;
         border-radius: vw(24);
         visibility: hidden;
+        @include mq{
+            position: static;
+            background-color: #fff;
+            border-radius: 0;
+            visibility: visible;
+        }
     }
 
     &__menu-list {
@@ -141,6 +152,16 @@ li {
 
     &__menu-list-item {
         font-size: vw(18);
+        @include mq{
+            font-size: mvw(16);
+            color: #000;
+        }
+
+        &:first-child{
+            @include mq{
+                display: none;
+            }
+        }
     }
 }
 
@@ -166,6 +187,7 @@ li {
 
     &__text {
         font-size: vw(15);
+        line-break: anywhere;
     }
 
     &__image {
@@ -196,10 +218,15 @@ li {
         margin-bottom: vw(7);
         font-size: vw(18);
         font-weight: 700;
+
+        &--br {
+            display: inline-block;
+        }
     }
 
     &__inner-text {
         font-size: vw(15);
+        letter-spacing: .006em;
     }
 }
 
@@ -223,9 +250,6 @@ li {
 
     &__image {
         width: 100%;
-        height: vw(201);
-        object-fit: cover;
-        border-radius: vw(24) vw(24) 0 0;
     }
 
     &__text {
@@ -263,8 +287,19 @@ li {
     }
 
     &__image {
-        width: vw(100);
-        height: vw(100);
+        width: vw(141);
+
+        &--03 {
+            width: vw(132);
+        }
+
+        &--04 {
+            width: vw(102);
+        }
+
+        &--05 {
+            width: vw(121);
+        }
     }
 
     &__text {
@@ -336,7 +371,7 @@ li {
             }
         }
 
-        &:nth-child(5){
+        &:nth-child(5) {
             padding-bottom: vw(9);
         }
 
@@ -375,9 +410,14 @@ li {
         font-size: vw(15);
         font-weight: 700;
         color: #09947b;
+
+        &--space{
+            content: "";
+            margin-left: vw(5);
+        }
     }
 
-    &__button{
+    &__button {
         margin: vw(24) auto 0;
         padding-top: vw(17);
         padding-bottom: vw(17);
@@ -389,25 +429,29 @@ li {
         background-color: #09947b;
         border-radius: vw(33);
         box-shadow: 0 vw(5) 0 0 #066655;
+
+        &:hover {
+            transform: translateY(vw(3));
+            box-shadow: 0 vw(2) 0 0 #066655;
+        }
     }
 }
 
 
 /* フッター ----------*/
-.footer{
+.footer {
     padding-top: vw(22);
     padding-bottom: vw(23);
     background-color: #168352;
 
-    &__container{
+    &__container {
         margin: 0 auto;
         width: vw(230);
     }
 
-    &__menu{
-    }
+    &__menu {}
 
-    &__menu-list{
+    &__menu-list {
         display: flex;
         justify-content: center;
         column-gap: vw(6);
@@ -415,7 +459,7 @@ li {
         color: #fff;
     }
 
-    &__menu-bar{
+    &__menu-bar {
         content: "";
         margin-top: vw(11);
         margin-left: vw(2);
