@@ -70,10 +70,11 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 0 4.1025641026vw;
+  height: 100%;
 }
 @media screen and (min-width: 768px) {
   .header__container {
-    padding: min(2.4166666667vw, 1.8125rem) min(9.5833333333vw, 7.1875rem);
+    padding: 0 min(9.5833333333vw, 7.1875rem);
   }
 }
 @media screen and (min-width: 768px) {
@@ -217,6 +218,11 @@ li {
 .cover__image {
   width: 100%;
 }
+@media screen and (min-width: 768px) {
+  .cover__image {
+    width: min(97.25vw, 72.9375rem);
+  }
+}
 
 /* 会社概要 ----------*/
 @media screen and (min-width: 768px) {
@@ -349,41 +355,40 @@ li {
 }
 
 /* 製品・サービス紹介 ----------*/
-.products-service {
+.service {
   padding-top: 12.5641025641vw;
   padding-bottom: 8.9743589744vw;
 }
 @media screen and (min-width: 768px) {
-  .products-service {
+  .service {
     padding-top: min(4.8333333333vw, 3.625rem);
     padding-bottom: min(5.3333333333vw, 4rem);
   }
 }
-.products-service__container {
+.service__container {
   margin: 5.641025641vw auto;
   width: 91.7948717949vw;
 }
 @media screen and (min-width: 768px) {
-  .products-service__container {
+  .service__container {
     margin: min(2.5vw, 1.875rem) auto 0;
     width: min(91.6666666667vw, 68.75rem);
   }
 }
-.products-service__list {
+.service__list {
   display: flex;
   flex-direction: column;
   row-gap: 5.1282051282vw;
 }
 @media screen and (min-width: 768px) {
-  .products-service__list {
+  .service__list {
     flex-direction: row;
     flex-wrap: wrap;
-    row-gap: 0;
-    -moz-column-gap: min(4.1666666667vw, 3.125rem);
-         column-gap: min(4.1666666667vw, 3.125rem);
+    row-gap: min(3.3333333333vw, 2.5rem);
+    justify-content: space-between;
   }
 }
-.products-service__list-item {
+.service__list-item {
   display: flex;
   align-items: center;
   -moz-column-gap: 4.358974359vw;
@@ -393,41 +398,53 @@ li {
   border-radius: 6.1538461538vw;
 }
 @media screen and (min-width: 768px) {
-  .products-service__list-item {
-    padding: min(2vw, 1.5rem) min(2.6666666667vw, 2rem);
+  .service__list-item {
+    padding: 0;
     width: calc((100% - min(4.1666666667vw, 3.125rem)) / 2);
+    height: min(15vw, 11.25rem);
     border-radius: min(2vw, 1.5rem);
   }
 }
-.products-service__image {
+@media screen and (min-width: 768px) {
+  .service__list-item--small {
+    width: calc((100% - min(8.3333333333vw, 6.25rem)) / 3);
+    height: min(12.5vw, 9.375rem);
+  }
+}
+.service__image {
   width: 36.1538461538vw;
 }
-.products-service__image--03 {
+.service__image--03 {
   width: 33.8461538462vw;
 }
-.products-service__image--04 {
+.service__image--04 {
   width: 26.1538461538vw;
 }
-.products-service__image--05 {
+.service__image--05 {
   width: 31.0256410256vw;
 }
 @media screen and (min-width: 768px) {
-  .products-service__image {
+  .service__image {
     width: min(15vw, 11.25rem);
   }
 }
-.products-service__text {
+.service__text {
   font-size: 4.6153846154vw;
   font-weight: 700;
   color: #fff;
 }
 @media screen and (min-width: 768px) {
-  .products-service__text {
+  .service__text {
     font-size: min(2vw, 1.5rem);
   }
 }
-.products-service__text--br {
+.service__text--br {
   display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .service__text--small {
+    font-size: min(1.6666666667vw, 1.25rem);
+  }
 }
 
 /* 事例紹介 ----------*/
@@ -436,15 +453,40 @@ li {
   padding-bottom: 5.641025641vw;
   background-color: #f3f9f6;
 }
+@media screen and (min-width: 768px) {
+  .case {
+    padding-top: min(4.5833333333vw, 3.4375rem);
+    padding-bottom: min(4.9166666667vw, 3.6875rem);
+  }
+}
 .case__container {
   margin: 5.641025641vw auto 0;
   width: 91.7948717949vw;
 }
+@media screen and (min-width: 768px) {
+  .case__container {
+    display: flex;
+    justify-content: space-between;
+    margin: min(2.5vw, 1.875rem) auto 0;
+    width: min(97.25vw, 72.9375rem);
+  }
+}
 .case__unit {
   margin-bottom: 6.9230769231vw;
 }
+@media screen and (min-width: 768px) {
+  .case__unit {
+    margin-bottom: 0;
+    width: calc((100% - min(5vw, 3.75rem)) / 3);
+  }
+}
 .case__unit:nth-child(2) {
   margin-bottom: 6.1538461538vw;
+}
+@media screen and (min-width: 768px) {
+  .case__unit:nth-child(2) {
+    margin-bottom: 0;
+  }
 }
 .case__image {
   width: 100%;
@@ -456,32 +498,79 @@ li {
   font-weight: 700;
   color: #09947b;
 }
+@media screen and (min-width: 768px) {
+  .case__text {
+    margin-top: min(0.6666666667vw, 0.5rem);
+    margin-left: 0;
+    font-size: min(1.5833333333vw, 1.1875rem);
+  }
+}
 
 /* お知らせ ----------*/
 .news {
   padding-top: 12.3076923077vw;
   padding-bottom: 15.8974358974vw;
 }
+@media screen and (min-width: 768px) {
+  .news {
+    padding-top: min(4.5vw, 3.375rem);
+    padding-bottom: min(5.3333333333vw, 4rem);
+  }
+}
 .news__container {
   margin: 5.641025641vw auto 0;
   width: 91.7948717949vw;
 }
+@media screen and (min-width: 768px) {
+  .news__container {
+    margin: min(2.4166666667vw, 1.8125rem) auto 0;
+    width: min(75vw, 56.25rem);
+  }
+}
 .news__list-item {
-  border-top: #ddd solid 0.2564102564vw;
   padding-bottom: 2.5641025641vw;
+  border-top: #ddd solid 0.2564102564vw;
+}
+@media screen and (min-width: 768px) {
+  .news__list-item {
+    display: flex;
+    padding-bottom: min(0.8333333333vw, 0.625rem);
+    border-top: #ddd solid min(0.0833333333vw, 0.0625rem);
+  }
 }
 .news__list-item:first-child {
   padding-bottom: 2.3076923077vw;
 }
+@media screen and (min-width: 768px) {
+  .news__list-item:first-child {
+    padding-bottom: min(0.75vw, 0.5625rem);
+  }
+}
 .news__list-item:first-child__list-category {
   padding-bottom: 0.5128205128vw;
+}
+@media screen and (min-width: 768px) {
+  .news__list-item:first-child__list-category {
+    padding-bottom: min(0.25vw, 0.1875rem);
+  }
 }
 .news__list-item:nth-child(5) {
   padding-bottom: 2.3076923077vw;
 }
+@media screen and (min-width: 768px) {
+  .news__list-item:nth-child(5) {
+    padding-bottom: min(0.75vw, 0.5625rem);
+  }
+}
 .news__list-item:last-child {
   padding-bottom: 2.8205128205vw;
   border-bottom: #ddd solid 0.2564102564vw;
+}
+@media screen and (min-width: 768px) {
+  .news__list-item:last-child {
+    padding-bottom: min(0.9166666667vw, 0.6875rem);
+    border-bottom: #ddd solid min(0.0833333333vw, 0.0625rem);
+  }
 }
 .news__list-head {
   display: flex;
@@ -489,9 +578,19 @@ li {
        column-gap: 4.358974359vw;
   padding-top: 3.5897435897vw;
 }
+@media screen and (min-width: 768px) {
+  .news__list-head {
+    padding-top: 0;
+  }
+}
 .news__list-date {
   font-size: 3.8461538462vw;
   color: #222;
+}
+@media screen and (min-width: 768px) {
+  .news__list-date {
+    font-size: min(1.1666666667vw, 0.875rem);
+  }
 }
 .news__list-category {
   margin-top: 0.5128205128vw;
@@ -504,15 +603,35 @@ li {
   background-color: #473221;
   border-radius: 1.0256410256vw;
 }
+@media screen and (min-width: 768px) {
+  .news__list-category {
+    margin: 0;
+    padding: min(0.25vw, 0.1875rem) 0;
+    width: min(11.1666666667vw, 8.375rem);
+    font-size: min(1.0833333333vw, 0.8125rem);
+    border-radius: min(0.3333333333vw, 0.25rem);
+  }
+}
 .news__list-text {
   margin: 2.3076923077vw 0.2564102564vw 0;
   font-size: 3.8461538462vw;
   font-weight: 700;
   color: #09947b;
 }
+@media screen and (min-width: 768px) {
+  .news__list-text {
+    margin: min(0.75vw, 0.5625rem) 0 0;
+    font-size: min(1.25vw, 0.9375rem);
+  }
+}
 .news__list-text--space {
   content: "";
   margin-left: 1.2820512821vw;
+}
+@media screen and (min-width: 768px) {
+  .news__list-text--space {
+    margin-left: min(0.4166666667vw, 0.3125rem);
+  }
 }
 .news__button {
   margin: 6.1538461538vw auto 0;
@@ -527,9 +646,24 @@ li {
   border-radius: 8.4615384615vw;
   box-shadow: 0 1.2820512821vw 0 0 #066655;
 }
+@media screen and (min-width: 768px) {
+  .news__button {
+    margin: min(2vw, 1.5rem) auto 0;
+    padding: min(1.4166666667vw, 1.0625rem) 0;
+    width: min(25vw, 18.75rem);
+    font-size: min(1.5vw, 1.125rem);
+    box-shadow: 0 min(0.4166666667vw, 0.3125rem) 0 0 #066655;
+  }
+}
 .news__button:hover {
   transform: translateY(0.7692307692vw);
   box-shadow: 0 0.5128205128vw 0 0 #066655;
+}
+@media screen and (min-width: 768px) {
+  .news__button:hover {
+    transform: translateY(min(0.25vw, 0.1875rem));
+    box-shadow: 0 min(0.1666666667vw, 0.125rem) 0 0 #066655;
+  }
 }
 
 /* フッター ----------*/
