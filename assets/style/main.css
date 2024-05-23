@@ -32,11 +32,23 @@ li {
   font-weight: 600;
   color: #168352;
 }
+@media screen and (min-width: 768px) {
+  .section-title__head {
+    font-size: min(1.6666666667vw, 1.25rem);
+  }
+}
 .section-title__heading {
   display: block;
   font-size: 5.1282051282vw;
   font-weight: 700;
   line-height: 1.25;
+}
+@media screen and (min-width: 768px) {
+  .section-title__heading {
+    margin-top: min(0.3333333333vw, 0.25rem);
+    margin-left: min(0.1666666667vw, 0.125rem);
+    font-size: min(2.3333333333vw, 1.75rem);
+  }
 }
 
 /* ヘッダー ----------*/
@@ -56,23 +68,35 @@ li {
 .header__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0 4.1025641026vw;
 }
 @media screen and (min-width: 768px) {
   .header__container {
-    padding: 0 min(2.6666666667vw, 2rem);
+    padding: min(2.4166666667vw, 1.8125rem) min(9.5833333333vw, 7.1875rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__logo {
+    margin-left: min(0.1666666667vw, 0.125rem);
   }
 }
 .header__logo-image {
   width: 50.5128205128vw;
+  vertical-align: baseline;
+}
+@media screen and (min-width: 768px) {
+  .header__logo-image {
+    width: min(21.8333333333vw, 16.375rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__button {
+    display: none;
+  }
 }
 .header__button-image {
   width: 6.1538461538vw;
-}
-@media screen and (min-width: 768px) {
-  .header__button-image {
-    display: none;
-  }
 }
 .header__menu {
   position: fixed;
@@ -86,26 +110,53 @@ li {
 @media screen and (min-width: 768px) {
   .header__menu {
     position: static;
+    margin: 0;
+    width: unset;
     background-color: #fff;
     border-radius: 0;
     visibility: visible;
   }
 }
+.header__menu-active {
+  visibility: visible;
+}
 .header__menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 6.4102564103vw;
+  margin-top: 8.2051282051vw;
+  margin-bottom: 8.4615384615vw;
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .header__menu-list {
+    flex-direction: row;
+    -moz-column-gap: min(3.25vw, 2.4375rem);
+         column-gap: min(3.25vw, 2.4375rem);
+    row-gap: 0;
+    margin: 0;
+  }
 }
 .header__menu-list-item {
   font-size: 4.6153846154vw;
+  font-weight: 700;
 }
 @media screen and (min-width: 768px) {
   .header__menu-list-item {
     font-size: min(1.3333333333vw, 1rem);
-    color: #000;
   }
+}
+.header__menu-list-item:first-child {
+  margin-right: 1.0256410256vw;
 }
 @media screen and (min-width: 768px) {
   .header__menu-list-item:first-child {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .header__menu-list-item--black {
+    color: #000;
   }
 }
 
@@ -114,32 +165,81 @@ li {
   margin-top: 16.1538461538vw;
   padding-bottom: 12.3076923077vw;
 }
+@media screen and (min-width: 768px) {
+  .cover {
+    margin-top: min(9.5vw, 7.125rem);
+    padding-bottom: min(4.5833333333vw, 3.4375rem);
+  }
+}
 .cover__container {
   margin: 0 4.1025641026vw;
+}
+@media screen and (min-width: 768px) {
+  .cover__container {
+    margin: 0 min(9.5833333333vw, 7.1875rem);
+    padding-top: min(3.1666666667vw, 2.375rem);
+  }
 }
 .cover__wrapper {
   margin-top: 18.4615384615vw;
   margin-bottom: 6.6666666667vw;
+}
+@media screen and (min-width: 768px) {
+  .cover__wrapper {
+    display: flex;
+    -moz-column-gap: min(11vw, 8.25rem);
+         column-gap: min(11vw, 8.25rem);
+    margin: 0 min(2.8333333333vw, 2.125rem) min(4.75vw, 3.5625rem);
+  }
 }
 .cover__catch {
   margin-bottom: 3.8461538462vw;
   font-size: 7.1794871795vw;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .cover__catch {
+    margin-bottom: 0;
+    font-size: min(3.3333333333vw, 2.5rem);
+    white-space: nowrap;
+  }
+}
 .cover__text {
   font-size: 3.8461538462vw;
   line-break: anywhere;
+}
+@media screen and (min-width: 768px) {
+  .cover__text {
+    margin-top: min(0.8333333333vw, 0.625rem);
+    font-size: min(1.25vw, 0.9375rem);
+  }
 }
 .cover__image {
   width: 100%;
 }
 
 /* 会社概要 ----------*/
+@media screen and (min-width: 768px) {
+  .about-us {
+    padding-bottom: min(3.1666666667vw, 2.375rem);
+  }
+}
 .about-us__container {
   margin-top: 5.641025641vw;
   padding: 8.2051282051vw 4.1025641026vw;
   background-image: url("/assets/image/top/about/about_us.jpg");
   background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .about-us__container {
+    display: flex;
+    -moz-column-gap: min(12.5vw, 9.375rem);
+         column-gap: min(12.5vw, 9.375rem);
+    margin: min(2.3333333333vw, 1.75rem) auto;
+    padding: 0;
+    width: min(80.6666666667vw, 60.5rem);
+    background-image: none;
+  }
 }
 .about-us__wrapper {
   padding: 3.8461538462vw 6.1538461538vw 4.6153846154vw;
@@ -148,17 +248,52 @@ li {
   border-radius: 8.2051282051vw;
   opacity: 0.8;
 }
+@media screen and (min-width: 768px) {
+  .about-us__wrapper {
+    margin-top: min(8.3333333333vw, 6.25rem);
+    padding: 0;
+    opacity: 1;
+  }
+}
 .about-us__inner-top {
   margin-bottom: 1.7948717949vw;
   font-size: 4.6153846154vw;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .about-us__inner-top {
+    font-size: min(1.6666666667vw, 1.25rem);
+  }
+}
 .about-us__inner-top--br {
   display: inline-block;
+}
+.about-us__inner-top--br:first-child {
+  display: inline;
+}
+@media screen and (min-width: 768px) {
+  .about-us__inner-top--br:first-child {
+    display: inline-block;
+  }
 }
 .about-us__inner-text {
   font-size: 3.8461538462vw;
   letter-spacing: 0.006em;
+}
+@media screen and (min-width: 768px) {
+  .about-us__inner-text {
+    font-size: min(1.25vw, 0.9375rem);
+  }
+}
+.about-us__image {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .about-us__image {
+    display: block;
+    margin-right: min(1.1666666667vw, 0.875rem);
+    width: min(32.5vw, 24.375rem);
+  }
 }
 
 /* 特徴 ----------*/
@@ -167,14 +302,35 @@ li {
   padding-bottom: 9.2307692308vw;
   background-color: #f3f9f6;
 }
+@media screen and (min-width: 768px) {
+  .features {
+    padding-top: min(4.4166666667vw, 3.3125rem);
+    padding-bottom: min(5.3333333333vw, 4rem);
+  }
+}
 .features__container {
   margin-top: 5.641025641vw;
+}
+@media screen and (min-width: 768px) {
+  .features__container {
+    display: flex;
+    -moz-column-gap: min(2.5vw, 1.875rem);
+         column-gap: min(2.5vw, 1.875rem);
+    margin: min(2.4166666667vw, 1.8125rem) auto 0;
+    width: min(97.25vw, 72.9375rem);
+  }
 }
 .features__unit {
   margin: 0 auto 4.8717948718vw;
   width: 91.7948717949vw;
   background-color: #fff;
   border-radius: 6.1538461538vw;
+}
+@media screen and (min-width: 768px) {
+  .features__unit {
+    margin-bottom: 0;
+    border-radius: min(2vw, 1.5rem);
+  }
 }
 .features__image {
   width: 100%;
@@ -185,20 +341,47 @@ li {
   font-weight: 700;
   color: #111;
 }
+@media screen and (min-width: 768px) {
+  .features__text {
+    padding: min(1vw, 0.75rem) min(1.6666666667vw, 1.25rem) min(1.1666666667vw, 0.875rem);
+    font-size: min(1.5833333333vw, 1.1875rem);
+  }
+}
 
 /* 製品・サービス紹介 ----------*/
 .products-service {
   padding-top: 12.5641025641vw;
   padding-bottom: 8.9743589744vw;
 }
+@media screen and (min-width: 768px) {
+  .products-service {
+    padding-top: min(4.8333333333vw, 3.625rem);
+    padding-bottom: min(5.3333333333vw, 4rem);
+  }
+}
 .products-service__container {
   margin: 5.641025641vw auto;
   width: 91.7948717949vw;
+}
+@media screen and (min-width: 768px) {
+  .products-service__container {
+    margin: min(2.5vw, 1.875rem) auto 0;
+    width: min(91.6666666667vw, 68.75rem);
+  }
 }
 .products-service__list {
   display: flex;
   flex-direction: column;
   row-gap: 5.1282051282vw;
+}
+@media screen and (min-width: 768px) {
+  .products-service__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 0;
+    -moz-column-gap: min(4.1666666667vw, 3.125rem);
+         column-gap: min(4.1666666667vw, 3.125rem);
+  }
 }
 .products-service__list-item {
   display: flex;
@@ -208,6 +391,13 @@ li {
   padding: 5.1282051282vw 6.1538461538vw;
   background-color: #168352;
   border-radius: 6.1538461538vw;
+}
+@media screen and (min-width: 768px) {
+  .products-service__list-item {
+    padding: min(2vw, 1.5rem) min(2.6666666667vw, 2rem);
+    width: calc((100% - min(4.1666666667vw, 3.125rem)) / 2);
+    border-radius: min(2vw, 1.5rem);
+  }
 }
 .products-service__image {
   width: 36.1538461538vw;
@@ -221,10 +411,20 @@ li {
 .products-service__image--05 {
   width: 31.0256410256vw;
 }
+@media screen and (min-width: 768px) {
+  .products-service__image {
+    width: min(15vw, 11.25rem);
+  }
+}
 .products-service__text {
   font-size: 4.6153846154vw;
   font-weight: 700;
   color: #fff;
+}
+@media screen and (min-width: 768px) {
+  .products-service__text {
+    font-size: min(2vw, 1.5rem);
+  }
 }
 .products-service__text--br {
   display: inline-block;
