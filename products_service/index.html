@@ -25,7 +25,7 @@
     <body>
         <!-- ヘッダー -->
         <header class="header">
-            <div class="header__container">
+            <div class="header__container header__container--subpage">
                 <!-- ロゴ -->
                 <div class="header__logo"><a href="/">
                         <img src="/assets/image/header/logo.svg" alt="Kirameki Farm" class="header__logo-image">
@@ -33,7 +33,7 @@
 
                 <!-- ハンバーガーボタン -->
                 <button type="button" class="header__button">
-                    <img src="/assets/image/header/ico_bar.svg" alt="" class="header__button-image">
+                    <img src="/assets/image/header/ico_bar.svg" alt="" class="header__button-image header__button-image--subpage">
                 </button>
 
                 <!-- ナビゲーション、ヘッダーメニュー -->
@@ -56,13 +56,12 @@
                             <source media="(min-width: 768px)" srcset="/assets/image/products_service/main_visual/main_visual_pc.png">
                             <img src="/assets/image/products_service/main_visual/main_visual_sp.png" alt="" class="products-mv__image">
                         </picture>
-                        <h1 class="products__heading">価格・スペック</h1>
+                        <h1 class="products-mv__heading">価格・スペック</h1>
                     </div>
                     <nav class="products-mv__breadcrumb">
-                        <ol class="products-mv__list">
-                            <li class="products-mv__list-item"><a href="">トップ</a></li>
-                            <li class="products-mv__list-item">価格・スペック</li>
-                        </ol>
+                        <div class="products-mv__breadcrumb-link"><a href="" class="products-mv__breadcrumb-link--black">トップ</a></div>
+                        <img src="/assets/image/arrow.png" alt="" class="products-mv__breadcrumb-arrow">
+                        <div class="products-mv__breadcrumb-link">価格・スペック</div>
                     </nav>
                 </div>
             </div>
@@ -70,9 +69,14 @@
             <!-- ギャラリー -->
             <section class="gallery">
                 <div class="gallery__container">
-                    <h2 class="section-title--products-servis">ギャラリー</h2>
+                    <h2 class="section-title--subpage">ギャラリー</h2>
                     <div class="gallery__carousel">
-                        <div><img src="/assets/image/products_service/gallery/gallery_01.png" alt="" class="gallery__image"></div>
+                        <div>
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="/assets/image/products_service/gallery/gallery_01.png">
+                                <img src="/assets/image/products_service/gallery/gallery_01_sp.png" alt="" class="gallery__image">
+                            </picture>
+                        </div>
                         <div><img src="/assets/image/products_service/gallery/gallery_02.png" alt="" class="gallery__image"></div>
                         <div><img src="/assets/image/products_service/gallery/gallery_03.png" alt="" class="gallery__image"></div>
                     </div>
@@ -82,7 +86,7 @@
             <!-- 特徴 -->
             <section class="feature">
                 <div class="feature__container">
-                    <h2 class="section-title--products-servis">特徴</h2>
+                    <h2 class="section-title--subpage">特徴</h2>
                     <!-- 1個目 -->
                     <div class="feature__unit">
                         <img src="/assets/image/products_service/feature/feature_01.png" alt="" class="feature__image">
@@ -104,7 +108,7 @@
             <!-- 価格 -->
             <section class="price">
                 <div class="price__container">
-                    <h2 class="section-title--products-servis">メーカー希望小売価格</h2>
+                    <h2 class="section-title--subpage">メーカー希望小売価格</h2>
                     <div class="price__price">¥550,000<span class="price__price--small">（税込）</span></div>
                 </div>
             </section>
@@ -112,7 +116,7 @@
             <!-- スペック -->
             <section class="spec">
                 <div class="spec__container">
-                    <h2 class="section-title--products-servis">スペック</h2>
+                    <h2 class="section-title--subpage">スペック</h2>
                     <div class="spec__wrpper">
                         <div class="spec__heading">機体</div>
                         <table class="spec__table">

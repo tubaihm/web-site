@@ -468,12 +468,14 @@ li {
 
     &__image {
         width: vw(141);
+
         @include mq {
             width: mvw(160);
         }
 
         &--03 {
             width: vw(132);
+
             @include mq {
                 width: mvw(200);
             }
@@ -481,6 +483,7 @@ li {
 
         &--04 {
             width: vw(102);
+
             @include mq {
                 width: mvw(158);
             }
@@ -488,6 +491,7 @@ li {
 
         &--05 {
             width: vw(121);
+
             @include mq {
                 width: mvw(186);
             }
@@ -506,6 +510,7 @@ li {
         &--br {
             display: inline-block;
         }
+
         &--small {
             @include mq {
                 font-size: mvw(20);
@@ -560,7 +565,7 @@ li {
             }
         }
 
-        &:hover{
+        &:hover {
             opacity: .5;
         }
     }
@@ -589,6 +594,7 @@ li {
 .news {
     padding-top: vw(48);
     padding-bottom: vw(62);
+
     @include mq {
         padding-top: mvw(54);
         padding-bottom: mvw(69);
@@ -597,6 +603,7 @@ li {
     &__container {
         margin: vw(22) auto 0;
         width: vw(358);
+
         @include mq {
             margin: mvw(29) auto 0;
             width: mvw(900);
@@ -606,6 +613,7 @@ li {
     &__list-item {
         padding-bottom: vw(10);
         border-top: #ddd solid vw(1);
+
         @include mq {
             display: flex;
             align-items: center;
@@ -617,6 +625,7 @@ li {
 
         &:first-child {
             padding-bottom: vw(9);
+
             @include mq {
                 padding-bottom: mvw(16);
             }
@@ -631,6 +640,7 @@ li {
 
         &:nth-child(5) {
             padding-bottom: vw(9);
+
             @include mq {
                 padding-bottom: mvw(15);
             }
@@ -640,6 +650,7 @@ li {
         &:last-child {
             padding-bottom: vw(11);
             border-bottom: #ddd solid vw(1);
+
             @include mq {
                 padding-bottom: mvw(16);
                 border-bottom: #ddd solid mvw(1);
@@ -651,13 +662,14 @@ li {
         display: flex;
         column-gap: vw(17);
         padding-top: vw(14);
+
         @include mq {
             column-gap: mvw(19);
             padding-top: mvw(8);
         }
 
-        &--02{
-            @include mq{
+        &--02 {
+            @include mq {
                 padding-top: mvw(9);
             }
         }
@@ -666,6 +678,7 @@ li {
     &__list-date {
         font-size: vw(15);
         color: #222;
+
         @include mq {
             font-size: mvw(14);
         }
@@ -681,6 +694,7 @@ li {
         color: #fff;
         background-color: #473221;
         border-radius: vw(4);
+
         @include mq {
             margin: 0;
             padding: mvw(3) 0;
@@ -695,6 +709,7 @@ li {
         font-size: vw(15);
         font-weight: 700;
         color: #09947b;
+
         @include mq {
             margin: mvw(9) 0 0;
             font-size: mvw(15);
@@ -703,6 +718,7 @@ li {
         &--space {
             content: "";
             margin-left: vw(5);
+
             @include mq {
                 margin-left: mvw(5);
             }
@@ -721,7 +737,8 @@ li {
         background-color: #09947b;
         border-radius: vw(33);
         box-shadow: 0 vw(5) 0 0 #066655;
-        @include mq{
+
+        @include mq {
             margin-top: mvw(32);
             padding: mvw(17) 0;
             width: mvw(300);
@@ -732,7 +749,8 @@ li {
         &:hover {
             transform: translateY(vw(3));
             box-shadow: 0 vw(2) 0 0 #066655;
-            @include mq{
+
+            @include mq {
                 transform: translateY(mvw(3));
                 box-shadow: 0 mvw(2) 0 0 #066655;
             }
@@ -774,7 +792,7 @@ li {
         transform: rotate(90deg);
         background-color: #fff;
 
-        @include mq{
+        @include mq {
             margin-top: mvw(14);
             margin-left: mvw(2);
             width: mvw(24);
@@ -782,9 +800,105 @@ li {
         }
     }
 
-    &__menu--list-style{
-        @include mq{
+    &__menu--list-style {
+        @include mq {
             letter-spacing: -.07em;
         }
+    }
+}
+
+
+// 下層ページ -----------------
+/* ヘッダー ----------*/
+.header {
+    &__container--subpage {
+        padding-top: vw(6);
+    }
+
+    &__button-image--subpage {
+        vertical-align: baseline;
+    }
+}
+
+// 価格スペック ----------
+.section-title--subpage {
+    position: relative;
+    padding-bottom: vw(4);
+    font-size: vw(22);
+    font-weight: 700;
+    border-bottom: #ddd solid vw(3);
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: vw(-3);
+        width: vw(50);
+        height: inherit;
+        border-bottom: #168352 solid vw(3);
+    }
+}
+
+/* メインビジュアル ----------*/
+.products-mv {
+    margin-top: vw(63);
+    padding-top: vw(20);
+
+    &__container {
+        margin: 0 vw(13);
+        text-align: center;
+    }
+
+    &__image {
+        width: vw(358);
+    }
+
+    &__heading {
+        margin-top: vw(18);
+        margin-left: vw(3);
+        text-align: left;
+        font-size: vw(30);
+        font-weight: 700;
+        letter-spacing: .006em;
+    }
+
+    &__breadcrumb {
+        display: flex;
+        column-gap: vw(7);
+        justify-content: right;
+        align-items: center;
+        margin-top: vw(16);
+    }
+
+    &__breadcrumb-link {
+        font-size: vw(12);
+        letter-spacing: .017em;
+
+        &--black {
+            color: #000;
+            letter-spacing: 0;
+        }
+    }
+
+    &__breadcrumb-arrow {
+        height: vw(10);
+    }
+}
+
+/* ギャラリー ----------*/
+.gallery {
+    padding-top: vw(26);
+
+    &__container {
+        margin: 0 auto;
+        width: vw(358);
+    }
+
+    &__carousel{
+        margin-top: vw(24);
+    }
+
+    &__image {
+        width: 100%;
     }
 }
