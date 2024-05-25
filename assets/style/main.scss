@@ -119,7 +119,7 @@ li {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 0 vw(16);
+        padding: 0 vw(16) vw(8);
         height: 100%;
 
         @include mq {
@@ -161,7 +161,8 @@ li {
         margin: 0 auto;
         background-color: #168352;
         border-radius: vw(24);
-        visibility: hidden;
+        opacity: 0;
+        transition: opacity 0.3s ease;
 
         @include mq {
             position: static;
@@ -169,12 +170,12 @@ li {
             width: unset;
             background-color: #fff;
             border-radius: 0;
-            visibility: visible;
+            opacity: 1;
         }
     }
 
     &__menu-active {
-        visibility: visible;
+        opacity: 1;
     }
 
     &__menu-list {
@@ -813,6 +814,7 @@ li {
 .header {
     &__container--subpage {
         padding-top: vw(6);
+        padding-bottom: 0;
     }
 
     &__button-image--subpage {
@@ -888,6 +890,7 @@ li {
 /* ギャラリー ----------*/
 .gallery {
     padding-top: vw(26);
+    padding-bottom: vw(16);
 
     &__container {
         margin: 0 auto;
@@ -900,5 +903,134 @@ li {
 
     &__image {
         width: 100%;
+    }
+}
+
+.slick-dots {
+    bottom: vw(4);
+    padding-right: vw(16);
+}
+
+.slick-dots li{
+    width: vw(4);
+}
+
+.slick-dots li button:before {
+	font-size: vw(8) ;
+	color: #eee ;
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+	color: #168352;
+}
+
+
+/* 特長 ----------*/
+.products-features{
+    padding-top: vw(8);
+    padding-bottom: vw(15);
+
+    &__container {
+        margin: 0 auto;
+        width: vw(358);
+    }
+
+    &__wrapper{
+        display: flex;
+        flex-direction: column;
+        row-gap: vw(34);
+        margin-top: vw(24);
+    }
+
+    &__image {
+        width: 100%;
+    }
+
+    &__text{
+        margin-top: vw(7);
+        padding-right: vw(1);
+        font-size: vw(18);
+        font-weight: 700;
+        line-break: anywhere;
+    }
+}
+
+
+/* 価格 ----------*/
+.price{
+    padding-top: vw(35);
+    padding-bottom: vw(35);
+
+    &__container{
+        margin: 0 auto;
+        width: vw(358);
+    }
+
+    &__price{
+        margin-top: vw(8);
+        font-size: vw(16);
+        font-weight: 700;
+
+        &--big{
+            font-family: "Montserrat", sans-serif;
+            font-size: vw(32);
+            font-weight: 700;
+        }
+    }
+}
+
+
+/* スペック ----------*/
+.spec{
+    padding-top: vw(8);
+
+    &__container{
+        margin: 0 auto;
+        width: vw(358);
+    }
+
+    &__wrapper{
+        margin-top: vw(25);
+    }
+
+    &__heading{
+        padding: vw(3) 0 vw(6) vw(16);
+        font-size: vw(20);
+        font-weight: 700;
+        line-height: 1;
+        border-left: #168352 solid vw(2);
+    }
+
+    &__table{
+        margin-top: vw(18);
+        width: 100%;
+        border: #ddd solid vw(1);
+        border-collapse: collapse;
+    }
+
+    &__table-unit{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__table-header{
+        height: vw(39);
+        font-size: vw(16);
+        font-weight: 700;
+        text-align: unset;
+        background-color: #f5f5f5;
+        border-bottom: #ddd solid vw(1);
+    }
+
+    &__table-date{
+        height: vw(39);
+        font-size: vw(16);
+        border-bottom: #ddd solid vw(1);
+
+        &--noneborder{
+            height: vw(38);
+            border-bottom: none;
+        }
     }
 }

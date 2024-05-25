@@ -18,8 +18,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
         <!-- リセットCSS -->
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
+        <!-- slickのcss -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
         <!-- css -->
-        <link rel="stylesheet" href="/assets/style/main.css">
+        <link rel="stylesheet" href="../assets/style/main.css">
     </head>
 
     <body>
@@ -83,24 +86,35 @@
                 </div>
             </section>
 
-            <!-- 特徴 -->
-            <section class="feature">
-                <div class="feature__container">
-                    <h2 class="section-title--subpage">特徴</h2>
-                    <!-- 1個目 -->
-                    <div class="feature__unit">
-                        <img src="/assets/image/products_service/feature/feature_01.png" alt="" class="feature__image">
-                        <p class="feature__text">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
-                    </div>
-                    <!-- 2個目 -->
-                    <div class="feature__unit">
-                        <img src="/assets/image/products_service/feature/feature_02.png" alt="" class="feature__image">
-                        <p class="feature__text">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
-                    </div>
-                    <!-- 3個目 -->
-                    <div class="feature__unit">
-                        <img src="/assets/image/products_service/feature/feature_03.png" alt="" class="feature__image">
-                        <p class="feature__text">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
+            <!-- 特長 -->
+            <section class="products-features">
+                <div class="products-features__container">
+                    <h2 class="section-title--subpage">特長</h2>
+                    <div class="products-features__wrapper">
+                        <!-- 1個目 -->
+                        <div class="products-features__unit">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="/assets/image/products_service/feature/feature_01.png">
+                                <img src="/assets/image/products_service/feature/feature_01_sp.png" alt="" class="products-features__image">
+                            </picture>
+                            <p class="products-features__text">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
+                        </div>
+                        <!-- 2個目 -->
+                        <div class="products-features__unit">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="/assets/image/products_service/feature/feature_02.png">
+                                <img src="/assets/image/products_service/feature/feature_02_sp.png" alt="" class="products-features__image">
+                            </picture>
+                            <p class="products-features__text">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
+                        </div>
+                        <!-- 3個目 -->
+                        <div class="products-features__unit">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="/assets/image/products_service/feature/feature_03.png">
+                                <img src="/assets/image/products_service/feature/feature_03_sp.png" alt="" class="products-features__image">
+                            </picture>
+                            <p class="products-features__text">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -109,7 +123,7 @@
             <section class="price">
                 <div class="price__container">
                     <h2 class="section-title--subpage">メーカー希望小売価格</h2>
-                    <div class="price__price">¥550,000<span class="price__price--small">（税込）</span></div>
+                    <div class="price__price"><span class="price__price--big">¥550,000</span>（税込）</div>
                 </div>
             </section>
 
@@ -117,7 +131,7 @@
             <section class="spec">
                 <div class="spec__container">
                     <h2 class="section-title--subpage">スペック</h2>
-                    <div class="spec__wrpper">
+                    <div class="spec__wrapper">
                         <div class="spec__heading">機体</div>
                         <table class="spec__table">
                             <!-- 1個目 -->
@@ -158,7 +172,7 @@
                             <!-- 8個目 -->
                             <tr class="spec__table-unit">
                                 <th class="spec__table-header">機能・特徴</th>
-                                <td class="spec__table-date">自動操縦、植物生育モニタリング、農薬散布</td>
+                                <td class="spec__table-date spec__table-date--noneborder">自動操縦、植物生育モニタリング、農薬散布</td>
                             </tr>
                         </table>
                     </div>
@@ -186,6 +200,12 @@
                 </nav>
             </div>
         </footer>
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+        <script src="../assets/scrypt/main.js"></script>
+
     </body>
 
 </html>

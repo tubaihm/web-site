@@ -69,7 +69,7 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 4.1025641026vw;
+  padding: 0 4.1025641026vw 2.0512820513vw;
   height: 100%;
 }
 @media screen and (min-width: 768px) {
@@ -108,7 +108,8 @@ li {
   margin: 0 auto;
   background-color: #168352;
   border-radius: 6.1538461538vw;
-  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   .header__menu {
@@ -117,11 +118,11 @@ li {
     width: unset;
     background-color: #fff;
     border-radius: 0;
-    visibility: visible;
+    opacity: 1;
   }
 }
 .header__menu-active {
-  visibility: visible;
+  opacity: 1;
 }
 .header__menu-list {
   display: flex;
@@ -754,6 +755,7 @@ li {
 /* ヘッダー ----------*/
 .header__container--subpage {
   padding-top: 1.5384615385vw;
+  padding-bottom: 0;
 }
 .header__button-image--subpage {
   vertical-align: baseline;
@@ -819,6 +821,7 @@ li {
 /* ギャラリー ----------*/
 .gallery {
   padding-top: 6.6666666667vw;
+  padding-bottom: 4.1025641026vw;
 }
 .gallery__container {
   margin: 0 auto;
@@ -829,4 +832,115 @@ li {
 }
 .gallery__image {
   width: 100%;
+}
+
+.slick-dots {
+  bottom: 1.0256410256vw;
+  padding-right: 4.1025641026vw;
+}
+
+.slick-dots li {
+  width: 1.0256410256vw;
+}
+
+.slick-dots li button:before {
+  font-size: 2.0512820513vw;
+  color: #eee;
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #168352;
+}
+
+/* 特長 ----------*/
+.products-features {
+  padding-top: 2.0512820513vw;
+  padding-bottom: 3.8461538462vw;
+}
+.products-features__container {
+  margin: 0 auto;
+  width: 91.7948717949vw;
+}
+.products-features__wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 8.7179487179vw;
+  margin-top: 6.1538461538vw;
+}
+.products-features__image {
+  width: 100%;
+}
+.products-features__text {
+  margin-top: 1.7948717949vw;
+  padding-right: 0.2564102564vw;
+  font-size: 4.6153846154vw;
+  font-weight: 700;
+  line-break: anywhere;
+}
+
+/* 価格 ----------*/
+.price {
+  padding-top: 8.9743589744vw;
+  padding-bottom: 8.9743589744vw;
+}
+.price__container {
+  margin: 0 auto;
+  width: 91.7948717949vw;
+}
+.price__price {
+  margin-top: 2.0512820513vw;
+  font-size: 4.1025641026vw;
+  font-weight: 700;
+}
+.price__price--big {
+  font-family: "Montserrat", sans-serif;
+  font-size: 8.2051282051vw;
+  font-weight: 700;
+}
+
+/* スペック ----------*/
+.spec {
+  padding-top: 2.0512820513vw;
+}
+.spec__container {
+  margin: 0 auto;
+  width: 91.7948717949vw;
+}
+.spec__wrapper {
+  margin-top: 6.4102564103vw;
+}
+.spec__heading {
+  padding: 0.7692307692vw 0 1.5384615385vw 4.1025641026vw;
+  font-size: 5.1282051282vw;
+  font-weight: 700;
+  line-height: 1;
+  border-left: #168352 solid 0.5128205128vw;
+}
+.spec__table {
+  margin-top: 4.6153846154vw;
+  width: 100%;
+  border: #ddd solid 0.2564102564vw;
+  border-collapse: collapse;
+}
+.spec__table-unit {
+  display: flex;
+  flex-direction: column;
+}
+.spec__table-header {
+  height: 10vw;
+  font-size: 4.1025641026vw;
+  font-weight: 700;
+  text-align: unset;
+  background-color: #f5f5f5;
+  border-bottom: #ddd solid 0.2564102564vw;
+}
+.spec__table-date {
+  height: 10vw;
+  font-size: 4.1025641026vw;
+  border-bottom: #ddd solid 0.2564102564vw;
+}
+.spec__table-date--noneborder {
+  height: 9.7435897436vw;
+  border-bottom: none;
 }/*# sourceMappingURL=main.css.map */
