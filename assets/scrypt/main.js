@@ -22,3 +22,11 @@ $(function () {
         fade: true,
     });
 });
+
+// アコーディオン
+$('.faq__question').on('click', function (e) {
+    var answer = $(this).next();
+    answer.slideToggle();
+
+    // $(this).toggleClass('triangle-up')
+});
