@@ -215,6 +215,10 @@ li {
                 color: #000;
             }
         }
+
+        &--current {
+            color: #168352;
+        }
     }
 }
 
@@ -467,7 +471,7 @@ li {
             }
         }
 
-        &:hover{
+        &:hover {
             @include mq {
                 color: #168352;
                 background-color: #dffaec;
@@ -818,13 +822,17 @@ li {
     &__container--subpage {
         padding-top: vw(6);
         padding-bottom: 0;
+
+        @include mq {
+            padding-top: mvw(2);
+        }
     }
 
     &__button-image--subpage {
         vertical-align: baseline;
     }
 
-    &__logo-image--bottom{
+    &__logo-image--bottom {
         vertical-align: bottom;
     }
 }
@@ -833,14 +841,28 @@ li {
 .subpage-mv {
     margin-top: vw(63);
     padding-top: vw(20);
+    @include mq {
+        margin-top: mvw(114);
+        padding-top: mvw(40);
+    }
 
     &__container {
         margin: 0 vw(13);
         text-align: center;
+
+        @include mq {
+            position: relative;
+            margin: 0 auto;
+            width: mvw(1200);
+        }
     }
 
     &__image {
         width: vw(358);
+
+        @include mq {
+            width: mvw(1200);
+        }
     }
 
     &__heading {
@@ -850,6 +872,16 @@ li {
         font-size: vw(30);
         font-weight: 700;
         letter-spacing: .006em;
+
+        @include mq {
+            position: absolute;
+            bottom: mvw(38);
+            margin-left: 0;
+            padding: mvw(22) mvw(35) mvw(28) mvw(40);
+            font-size: mvw(36);
+            background-color: #fff;
+            border-top-right-radius: mvw(40);
+        }
     }
 
     &__breadcrumb {
@@ -858,11 +890,19 @@ li {
         justify-content: right;
         align-items: center;
         margin-top: vw(16);
+
+        @include mq {
+            column-gap: mvw(6);
+            margin-top: mvw(18);
+        }
     }
 
     &__breadcrumb-link {
         font-size: vw(12);
         letter-spacing: .017em;
+        @include mq {
+            font-size: mvw(12);
+        }
 
         &--black {
             color: #000;
@@ -872,6 +912,9 @@ li {
 
     &__breadcrumb-arrow {
         height: vw(10);
+        @include mq {
+            height: mvw(10);
+        }
     }
 }
 
@@ -905,7 +948,7 @@ li {
         width: vw(358);
     }
 
-    &__carousel{
+    &__carousel {
         margin-top: vw(24);
     }
 
@@ -916,7 +959,7 @@ li {
     }
 }
 
-.slick-slide img{
+.slick-slide img {
     object-fit: cover;
 }
 
@@ -925,7 +968,7 @@ li {
     padding-right: vw(16);
 }
 
-.slick-dots li{
+.slick-dots li {
     margin: 0 vw(5);
     width: vw(4);
     height: vw(20);
@@ -941,18 +984,18 @@ li {
     width: vw(20);
     height: vw(20);
     line-height: vw(20);
-	font-size: vw(8) ;
-	color: #eee ;
+    font-size: vw(8);
+    color: #eee;
     opacity: 1;
 }
 
 .slick-dots li.slick-active button:before {
-	color: #168352;
+    color: #168352;
 }
 
 
 /* 特長 ----------*/
-.products-features{
+.products-features {
     padding-top: vw(8);
     padding-bottom: vw(15);
 
@@ -961,7 +1004,7 @@ li {
         width: vw(358);
     }
 
-    &__wrapper{
+    &__wrapper {
         display: flex;
         flex-direction: column;
         row-gap: vw(34);
@@ -972,7 +1015,7 @@ li {
         width: 100%;
     }
 
-    &__text{
+    &__text {
         margin-top: vw(7);
         padding-right: vw(1);
         font-size: vw(18);
@@ -983,21 +1026,21 @@ li {
 
 
 /* 価格 ----------*/
-.price{
+.price {
     padding-top: vw(35);
     padding-bottom: vw(35);
 
-    &__container{
+    &__container {
         margin: 0 auto;
         width: vw(358);
     }
 
-    &__price{
+    &__price {
         margin-top: vw(8);
         font-size: vw(16);
         font-weight: 700;
 
-        &--big{
+        &--big {
             font-family: "Montserrat", sans-serif;
             font-size: vw(32);
             font-weight: 700;
@@ -1007,20 +1050,20 @@ li {
 
 
 /* スペック ----------*/
-.spec{
+.spec {
     padding-top: vw(8);
     padding-bottom: vw(64);
 
-    &__container{
+    &__container {
         margin: 0 auto;
         width: vw(358);
     }
 
-    &__wrapper{
+    &__wrapper {
         margin-top: vw(25);
     }
 
-    &__heading{
+    &__heading {
         padding: vw(3) 0 vw(6) vw(16);
         font-size: vw(20);
         font-weight: 700;
@@ -1028,20 +1071,20 @@ li {
         border-left: #168352 solid vw(2);
     }
 
-    &__table{
+    &__table {
         margin-top: vw(18);
         width: 100%;
         border: #ddd solid vw(1);
         border-collapse: collapse;
     }
 
-    &__table-unit{
+    &__table-unit {
         display: flex;
         flex-direction: column;
         line-height: 2.3;
     }
 
-    &__table-header{
+    &__table-header {
         padding-left: vw(19);
         height: vw(39);
         font-size: vw(16);
@@ -1051,13 +1094,13 @@ li {
         border-bottom: #ddd solid vw(1);
     }
 
-    &__table-date{
+    &__table-date {
         padding-left: vw(19);
         height: vw(39);
         font-size: vw(16);
         border-bottom: #ddd solid vw(1);
 
-        &--noneborder{
+        &--noneborder {
             height: vw(38);
             border-bottom: none;
         }
@@ -1066,18 +1109,18 @@ li {
 
 
 /* お問い合わせ ----------*/
-.contact{
+.contact {
     height: vw(360);
     background-image: url("/assets/image/products_service/contact/contact_sp.jpg");
     background-size: cover;
 
-    &__container{
+    &__container {
         margin: 0 auto;
         padding-top: vw(140);
         width: vw(358);
     }
 
-    &__button{
+    &__button {
         padding-top: vw(18);
         width: vw(358);
         height: vw(80);
@@ -1091,50 +1134,67 @@ li {
 
 
 // よくある質問 ----------
-.faq{
+.faq {
     padding-top: vw(36);
+    padding-bottom: vw(170);
 
-    &__container{
+    &__container {
         margin: 0 auto;
         width: vw(358);
     }
 
-    &__accordion-content{
-        margin-bottom: vw(21);
+    &__accordion-content {
+        margin-bottom: vw(23);
+        padding-top: vw(21);
+        padding-bottom: vw(18);
         border: #ccc solid vw(1);
         border-radius: vw(16);
 
-        &:last-child{
+        &:nth-child(2n),
+        &:nth-child(7) {
+            margin-bottom: vw(25);
+        }
+
+        &:nth-child(5) {
+            padding-bottom: vw(16);
+        }
+
+        &:nth-child(9) {
+            padding-bottom: vw(17);
+        }
+
+        &:last-child {
             margin-bottom: 0;
         }
     }
 
-    &__question{
+    &__question {
         display: flex;
         justify-content: space-between;
         column-gap: vw(16);
-        padding: vw(21) vw(23) vw(16);
+        padding: 0 vw(23);
         cursor: pointer;
     }
 
-    &__question-icon{
-        font-family:  "Montserrat", sans-serif;
+    &__question-icon {
+        font-family: "Montserrat", sans-serif;
         font-size: vw(24);
         font-weight: 700;
         line-height: 1;
         color: #168352;
     }
 
-    &__question-inner{
+    &__question-inner {
         margin-top: vw(2);
+        width: vw(234);
     }
 
-    &__question-inner-top{
+    &__question-inner-top {
         display: flex;
         column-gap: vw(8);
     }
 
-    &__question-category{
+    &__question-category {
         width: vw(100);
         height: vw(24);
         text-align: center;
@@ -1144,19 +1204,26 @@ li {
         border-radius: vw(4);
     }
 
-    &__question-text{
+    &__question-text {
         font-size: vw(16);
         font-weight: 700;
+        line-break: anywhere;
     }
 
-    &__question-switch{
+    &__question-switch {
         margin-top: vw(5);
         width: vw(19);
         height: vw(19);
     }
 
-    &__answer{
+    &__answer {
         display: none;
+        padding: vw(1) vw(24) 0;
         font-size: vw(16);
+        line-break: anywhere;
+
+        &--11 {
+            margin-top: vw(8);
+        }
     }
 }
