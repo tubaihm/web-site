@@ -25,8 +25,6 @@ $(function () {
 
 // アコーディオン
 $('.faq__question').on('click', function (e) {
-    var answer = $(this).next();
-    answer.slideToggle();
-
-    // $(this).toggleClass('triangle-up')
+    $(this).toggleClass('faq__question--active');
+    $(this).next().slideToggle();
 });
