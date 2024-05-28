@@ -778,6 +778,11 @@ li {
     letter-spacing: -0.07em;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer__list-style {
+    letter-spacing: -0.07em;
+  }
+}
 
 /* ヘッダー ----------*/
 .header__container--subpage {
@@ -814,8 +819,7 @@ li {
 @media screen and (min-width: 768px) {
   .subpage-mv__container {
     position: relative;
-    margin: 0 auto;
-    width: min(100vw, 75rem);
+    margin: 0 min(8.1666666667vw, 6.125rem);
   }
 }
 .subpage-mv__image {
@@ -823,7 +827,7 @@ li {
 }
 @media screen and (min-width: 768px) {
   .subpage-mv__image {
-    width: min(100vw, 75rem);
+    width: 99.7%;
   }
 }
 .subpage-mv__heading {
@@ -839,7 +843,7 @@ li {
     position: absolute;
     bottom: min(3.1666666667vw, 2.375rem);
     margin-left: 0;
-    padding: min(1.8333333333vw, 1.375rem) min(2.9166666667vw, 2.1875rem) min(2.3333333333vw, 1.75rem) min(3.3333333333vw, 2.5rem);
+    padding: min(1.8333333333vw, 1.375rem) min(2.9166666667vw, 2.1875rem) min(2.3333333333vw, 1.75rem) min(3.5vw, 2.625rem);
     font-size: min(3vw, 2.25rem);
     background-color: #fff;
     border-top-right-radius: min(3.3333333333vw, 2.5rem);
@@ -889,6 +893,13 @@ li {
   font-weight: 700;
   border-bottom: #ddd solid 0.7692307692vw;
 }
+@media screen and (min-width: 768px) {
+  .section-title--subpage {
+    padding-bottom: min(1.25vw, 0.9375rem);
+    font-size: min(2.3333333333vw, 1.75rem);
+    border-bottom: #ddd solid min(0.4166666667vw, 0.3125rem);
+  }
+}
 .section-title--subpage::before {
   content: "";
   position: absolute;
@@ -898,23 +909,52 @@ li {
   height: inherit;
   border-bottom: #168352 solid 0.7692307692vw;
 }
+@media screen and (min-width: 768px) {
+  .section-title--subpage::before {
+    bottom: max(-0.4166666667vw, -0.3125rem);
+    width: min(8.3333333333vw, 6.25rem);
+    border-bottom: #168352 solid min(0.4166666667vw, 0.3125rem);
+  }
+}
 
 /* ギャラリー ----------*/
 .gallery {
   padding-top: 6.6666666667vw;
   padding-bottom: 4.1025641026vw;
 }
+@media screen and (min-width: 768px) {
+  .gallery {
+    padding-top: min(4vw, 3rem);
+    padding-bottom: min(2vw, 1.5rem);
+  }
+}
 .gallery__container {
   margin: 0 auto;
   width: 91.7948717949vw;
 }
+@media screen and (min-width: 768px) {
+  .gallery__container {
+    width: min(66.6666666667vw, 50rem);
+  }
+}
 .gallery__carousel {
   margin-top: 6.1538461538vw;
+}
+@media screen and (min-width: 768px) {
+  .gallery__carousel {
+    margin-top: min(2.6666666667vw, 2rem);
+  }
 }
 .gallery__image {
   width: 100%;
   height: 60.7692307692vw;
   border-radius: 6.1538461538vw;
+}
+@media screen and (min-width: 768px) {
+  .gallery__image {
+    height: auto;
+    border-radius: 0;
+  }
 }
 
 .slick-slide img {
@@ -926,17 +966,37 @@ li {
   bottom: 1.0256410256vw;
   padding-right: 4.1025641026vw;
 }
+@media screen and (min-width: 768px) {
+  .slick-dots {
+    bottom: min(1.3333333333vw, 1rem);
+    padding-right: min(1.3333333333vw, 1rem);
+  }
+}
 
 .slick-dots li {
   margin: 0 1.2820512821vw;
   width: 1.0256410256vw;
   height: 5.1282051282vw;
 }
+@media screen and (min-width: 768px) {
+  .slick-dots li {
+    margin: 0 min(0.4166666667vw, 0.3125rem);
+    width: min(0.3333333333vw, 0.25rem);
+    height: min(1.6666666667vw, 1.25rem);
+  }
+}
 
 .slick-dots li button {
   width: 5.1282051282vw;
   height: 5.1282051282vw;
   padding: 1.2820512821vw;
+}
+@media screen and (min-width: 768px) {
+  .slick-dots li button {
+    width: min(1.6666666667vw, 1.25rem);
+    height: min(1.6666666667vw, 1.25rem);
+    padding: min(0.4166666667vw, 0.3125rem);
+  }
 }
 
 .slick-dots li button:before {
@@ -946,6 +1006,14 @@ li {
   font-size: 2.0512820513vw;
   color: #eee;
   opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .slick-dots li button:before {
+    width: min(1.6666666667vw, 1.25rem);
+    height: min(1.6666666667vw, 1.25rem);
+    line-height: min(1.6666666667vw, 1.25rem);
+    font-size: min(0.6666666667vw, 0.5rem);
+  }
 }
 
 .slick-dots li.slick-active button:before {
@@ -957,15 +1025,40 @@ li {
   padding-top: 2.0512820513vw;
   padding-bottom: 3.8461538462vw;
 }
+@media screen and (min-width: 768px) {
+  .products-features {
+    padding-top: min(0.3333333333vw, 0.25rem);
+    padding-bottom: min(2.6666666667vw, 2rem);
+  }
+}
 .products-features__container {
   margin: 0 auto;
   width: 91.7948717949vw;
+}
+@media screen and (min-width: 768px) {
+  .products-features__container {
+    width: min(66.6666666667vw, 50rem);
+  }
 }
 .products-features__wrapper {
   display: flex;
   flex-direction: column;
   row-gap: 8.7179487179vw;
   margin-top: 6.1538461538vw;
+}
+@media screen and (min-width: 768px) {
+  .products-features__wrapper {
+    flex-direction: row;
+    -moz-column-gap: min(2.5vw, 1.875rem);
+         column-gap: min(2.5vw, 1.875rem);
+    row-gap: 0;
+    margin-top: min(2.6666666667vw, 2rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .products-features__unit {
+    width: calc((100% - min(5vw, 3.75rem)) / 3);
+  }
 }
 .products-features__image {
   width: 100%;
@@ -977,25 +1070,54 @@ li {
   font-weight: 700;
   line-break: anywhere;
 }
+@media screen and (min-width: 768px) {
+  .products-features__text {
+    margin-top: min(0.5833333333vw, 0.4375rem);
+    padding-right: 0;
+    font-size: min(1.5vw, 1.125rem);
+  }
+}
 
 /* 価格 ----------*/
 .price {
   padding-top: 8.9743589744vw;
   padding-bottom: 8.9743589744vw;
 }
+@media screen and (min-width: 768px) {
+  .price {
+    padding-top: min(1.5833333333vw, 1.1875rem);
+    padding-bottom: min(3.1666666667vw, 2.375rem);
+  }
+}
 .price__container {
   margin: 0 auto;
   width: 91.7948717949vw;
+}
+@media screen and (min-width: 768px) {
+  .price__container {
+    width: min(66.6666666667vw, 50rem);
+  }
 }
 .price__price {
   margin-top: 2.0512820513vw;
   font-size: 4.1025641026vw;
   font-weight: 700;
 }
+@media screen and (min-width: 768px) {
+  .price__price {
+    margin-top: min(1.3333333333vw, 1rem);
+    font-size: min(1.3333333333vw, 1rem);
+  }
+}
 .price__price--big {
   font-family: "Montserrat", sans-serif;
   font-size: 8.2051282051vw;
   font-weight: 700;
+}
+@media screen and (min-width: 768px) {
+  .price__price--big {
+    font-size: min(2.6666666667vw, 2rem);
+  }
 }
 
 /* スペック ----------*/
@@ -1003,12 +1125,28 @@ li {
   padding-top: 2.0512820513vw;
   padding-bottom: 16.4102564103vw;
 }
+@media screen and (min-width: 768px) {
+  .spec {
+    padding-top: min(0.8333333333vw, 0.625rem);
+    padding-bottom: min(6vw, 4.5rem);
+  }
+}
 .spec__container {
   margin: 0 auto;
   width: 91.7948717949vw;
 }
+@media screen and (min-width: 768px) {
+  .spec__container {
+    width: min(66.6666666667vw, 50rem);
+  }
+}
 .spec__wrapper {
   margin-top: 6.4102564103vw;
+}
+@media screen and (min-width: 768px) {
+  .spec__wrapper {
+    margin: min(2.6666666667vw, 2rem) min(2.5vw, 1.875rem) 0;
+  }
 }
 .spec__heading {
   padding: 0.7692307692vw 0 1.5384615385vw 4.1025641026vw;
@@ -1017,16 +1155,35 @@ li {
   line-height: 1;
   border-left: #168352 solid 0.5128205128vw;
 }
+@media screen and (min-width: 768px) {
+  .spec__heading {
+    padding: min(0.5833333333vw, 0.4375rem) 0 min(0.75vw, 0.5625rem) min(1.3333333333vw, 1rem);
+    font-size: min(2vw, 1.5rem);
+    border-left: #168352 solid min(0.25vw, 0.1875rem);
+  }
+}
 .spec__table {
   margin-top: 4.6153846154vw;
   width: 100%;
   border: #ddd solid 0.2564102564vw;
   border-collapse: collapse;
 }
+@media screen and (min-width: 768px) {
+  .spec__table {
+    margin-top: min(2vw, 1.5rem);
+    border: #ddd solid min(0.0833333333vw, 0.0625rem);
+  }
+}
 .spec__table-unit {
   display: flex;
   flex-direction: column;
   line-height: 2.3;
+}
+@media screen and (min-width: 768px) {
+  .spec__table-unit {
+    flex-direction: row;
+    line-height: 3.8;
+  }
 }
 .spec__table-header {
   padding-left: 4.8717948718vw;
@@ -1037,15 +1194,55 @@ li {
   background-color: #f5f5f5;
   border-bottom: #ddd solid 0.2564102564vw;
 }
+@media screen and (min-width: 768px) {
+  .spec__table-header {
+    padding-left: min(1.5833333333vw, 1.1875rem);
+    width: min(16.5vw, 12.375rem);
+    height: min(5.25vw, 3.9375rem);
+    font-size: min(1.3333333333vw, 1rem);
+    border-bottom: #ddd solid min(0.0833333333vw, 0.0625rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .spec__table-header--07 {
+    height: min(5.0833333333vw, 3.8125rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .spec__table-header--noneborder {
+    height: min(5.1666666667vw, 3.875rem);
+    border-bottom: none;
+  }
+}
 .spec__table-date {
   padding-left: 4.8717948718vw;
   height: 10vw;
   font-size: 4.1025641026vw;
   border-bottom: #ddd solid 0.2564102564vw;
 }
+@media screen and (min-width: 768px) {
+  .spec__table-date {
+    padding-left: min(1.9166666667vw, 1.4375rem);
+    width: calc(100% - min(16.6666666667vw, 12.5rem));
+    height: min(5.25vw, 3.9375rem);
+    font-size: min(1.3333333333vw, 1rem);
+    border-left: #ddd solid min(0.0833333333vw, 0.0625rem);
+    border-bottom: #ddd solid min(0.0833333333vw, 0.0625rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .spec__table-date--07 {
+    height: min(5.0833333333vw, 3.8125rem);
+  }
+}
 .spec__table-date--noneborder {
   height: 9.7435897436vw;
   border-bottom: none;
+}
+@media screen and (min-width: 768px) {
+  .spec__table-date--noneborder {
+    height: min(5.1666666667vw, 3.875rem);
+  }
 }
 
 /* お問い合わせ ----------*/
@@ -1054,10 +1251,22 @@ li {
   background-image: url("/assets/image/products_service/contact/contact_sp.jpg");
   background-size: cover;
 }
+@media screen and (min-width: 768px) {
+  .contact {
+    height: min(37.5vw, 28.125rem);
+    background-image: url("/assets/image/products_service/contact/contact.jpg");
+  }
+}
 .contact__container {
   margin: 0 auto;
   padding-top: 35.8974358974vw;
   width: 91.7948717949vw;
+}
+@media screen and (min-width: 768px) {
+  .contact__container {
+    padding-top: min(15.5vw, 11.625rem);
+    width: min(29.8333333333vw, 22.375rem);
+  }
 }
 .contact__button {
   padding-top: 4.6153846154vw;
@@ -1069,25 +1278,82 @@ li {
   border: #fff solid 0.5128205128vw;
   border-radius: 10.2564102564vw;
 }
+@media screen and (min-width: 768px) {
+  .contact__button {
+    padding-top: min(1.5vw, 1.125rem);
+    width: min(29.8333333333vw, 22.375rem);
+    height: min(6.6666666667vw, 5rem);
+    font-size: min(1.6666666667vw, 1.25rem);
+    border: #fff solid min(0.1666666667vw, 0.125rem);
+    border-radius: min(3.3333333333vw, 2.5rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact__button:hover {
+    background-color: #fff;
+    color: #168352;
+  }
+}
 
 .faq {
   padding-top: 9.2307692308vw;
   padding-bottom: 43.5897435897vw;
 }
+@media screen and (min-width: 768px) {
+  .faq {
+    padding-top: min(5vw, 3.75rem);
+    padding-bottom: min(6vw, 4.5rem);
+  }
+}
 .faq__container {
   margin: 0 auto;
   width: 91.7948717949vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__container {
+    width: min(66.6666666667vw, 50rem);
+  }
 }
 .faq__accordion-content {
   margin-bottom: 5.8974358974vw;
   border: #ccc solid 0.2564102564vw;
   border-radius: 4.1025641026vw;
 }
-.faq__accordion-content:nth-child(2n), .faq__accordion-content:nth-child(7) {
+@media screen and (min-width: 768px) {
+  .faq__accordion-content {
+    margin-bottom: min(2.0833333333vw, 1.5625rem);
+    border: #ccc solid min(0.0833333333vw, 0.0625rem);
+    border-radius: min(1.3333333333vw, 1rem);
+  }
+}
+.faq__accordion-content:nth-child(2n) {
   margin-bottom: 6.4102564103vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion-content:nth-child(2n) {
+    margin-bottom: min(2.0833333333vw, 1.5625rem);
+  }
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion-content:nth-child(3) {
+    margin-bottom: min(2vw, 1.5rem);
+  }
 }
 .faq__accordion-content:nth-child(4) {
   margin-bottom: 5.8974358974vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion-content:nth-child(4) {
+    margin-bottom: min(2.1666666667vw, 1.625rem);
+  }
+}
+.faq__accordion-content:nth-child(7) {
+  margin-bottom: 6.1538461538vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__accordion-content:nth-child(7) {
+    margin-bottom: min(2.0833333333vw, 1.5625rem);
+  }
 }
 .faq__accordion-content:last-child {
   margin-bottom: 0;
@@ -1100,6 +1366,13 @@ li {
   padding: 5.3846153846vw 5.8974358974vw 4.6153846154vw;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .faq__question {
+    -moz-column-gap: 0;
+         column-gap: 0;
+    padding: min(1.5833333333vw, 1.1875rem) min(2.5833333333vw, 1.9375rem) min(1.3333333333vw, 1rem);
+  }
+}
 .faq__question::after {
   content: "";
   display: block;
@@ -1111,6 +1384,13 @@ li {
   background-repeat: no-repeat;
   background-position: center;
 }
+@media screen and (min-width: 768px) {
+  .faq__question::after {
+    margin-top: min(0.5vw, 0.375rem);
+    width: min(1.5833333333vw, 1.1875rem);
+    height: min(1.5833333333vw, 1.1875rem);
+  }
+}
 .faq__question--active::after {
   background-image: url("/assets/image/faq/icon-plus.svg");
 }
@@ -1121,14 +1401,31 @@ li {
   line-height: 1;
   color: #168352;
 }
+@media screen and (min-width: 768px) {
+  .faq__question-icon {
+    font-size: min(2vw, 1.5rem);
+  }
+}
 .faq__question-inner {
   margin-top: 0.5128205128vw;
   width: 60vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__question-inner {
+    margin-top: min(0.25vw, 0.1875rem);
+    width: min(55.1666666667vw, 41.375rem);
+  }
 }
 .faq__question-inner-top {
   display: flex;
   -moz-column-gap: 2.0512820513vw;
        column-gap: 2.0512820513vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__question-inner-top {
+    -moz-column-gap: min(0.6666666667vw, 0.5rem);
+         column-gap: min(0.6666666667vw, 0.5rem);
+  }
 }
 .faq__question-category {
   width: 25.641025641vw;
@@ -1139,36 +1436,95 @@ li {
   border: #168352 solid 0.2564102564vw;
   border-radius: 1.0256410256vw;
 }
+@media screen and (min-width: 768px) {
+  .faq__question-category {
+    width: min(8.3333333333vw, 6.25rem);
+    height: min(2vw, 1.5rem);
+    font-size: min(0.9166666667vw, 0.6875rem);
+    border: #168352 solid min(0.0833333333vw, 0.0625rem);
+    border-radius: min(0.3333333333vw, 0.25rem);
+  }
+}
 .faq__question-text {
   font-size: 4.1025641026vw;
   font-weight: 700;
   line-break: anywhere;
 }
+@media screen and (min-width: 768px) {
+  .faq__question-text {
+    margin-top: min(0.6666666667vw, 0.5rem);
+    font-size: min(1.5vw, 1.125rem);
+  }
+}
 .faq__answer {
   margin-top: -4.6153846154vw;
+  display: none;
   padding: 0.2564102564vw 6.1538461538vw 4.6153846154vw;
   font-size: 4.1025641026vw;
   line-break: anywhere;
 }
+@media screen and (min-width: 768px) {
+  .faq__answer {
+    margin-top: min(0.0833333333vw, 0.0625rem);
+    padding: 0 min(2.6666666667vw, 2rem) min(1.5vw, 1.125rem);
+    font-size: min(1.3333333333vw, 1rem);
+  }
+}
 .faq__answer--04, .faq__answer--05, .faq__answer--06, .faq__answer--07, .faq__answer--08, .faq__answer--09, .faq__answer--11 {
   padding-left: 6.9230769231vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__answer--04, .faq__answer--05, .faq__answer--06, .faq__answer--07, .faq__answer--08, .faq__answer--09, .faq__answer--11 {
+    padding-left: min(2.5833333333vw, 1.9375rem);
+  }
 }
 .faq__answer--04 {
   margin-top: -4.358974359vw;
 }
+@media screen and (min-width: 768px) {
+  .faq__answer--04 {
+    margin-top: 0;
+  }
+}
 .faq__answer--05 {
   padding-bottom: 4.358974359vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__answer--05 {
+    padding-bottom: min(1.4166666667vw, 1.0625rem);
+  }
 }
 .faq__answer--07 {
   padding-right: 5.1282051282vw;
 }
+@media screen and (min-width: 768px) {
+  .faq__answer--07 {
+    padding-right: min(1.6666666667vw, 1.25rem);
+  }
+}
 .faq__answer--09 {
   padding-bottom: 4.358974359vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__answer--09 {
+    padding-bottom: min(1.4166666667vw, 1.0625rem);
+  }
 }
 .faq__answer--10 {
   padding-left: 6.6666666667vw;
 }
+@media screen and (min-width: 768px) {
+  .faq__answer--10 {
+    padding-left: min(2.6666666667vw, 2rem);
+  }
+}
 .faq__answer--11 {
   margin-top: -2.3076923077vw;
   padding-bottom: 4.358974359vw;
+}
+@media screen and (min-width: 768px) {
+  .faq__answer--11 {
+    margin-top: min(0.0833333333vw, 0.0625rem);
+    padding-bottom: min(1.4166666667vw, 1.0625rem);
+  }
 }/*# sourceMappingURL=main.css.map */
