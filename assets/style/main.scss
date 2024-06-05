@@ -487,7 +487,6 @@ li {
         align-items: center;
         column-gap: vw(17);
         padding: vw(20) vw(24);
-        color: #fff;
 
         @include mq {
             column-gap: mvw(30);
@@ -691,10 +690,15 @@ li {
         }
     }
 
-    &__list-link{
+    &__list-link {
         display: block;
         width: 100%;
         height: 100%;
+
+        @include mq {
+            display: flex;
+            column-gap: mvw(24);
+        }
     }
 
     &__list-head {
@@ -894,7 +898,8 @@ li {
 
         @include mq {
             position: relative;
-            margin: 0 mvw(98);
+            margin: 0 auto;
+            width: mvw(1204);
         }
     }
 
@@ -1026,7 +1031,7 @@ li {
         border-radius: vw(24);
 
         @include mq {
-            height: auto;
+            height: mvw(499.94);
             border-radius: 0;
         }
     }
@@ -1455,7 +1460,7 @@ li {
             margin-top: vw(5);
             width: vw(19);
             height: vw(19);
-            background-image: url("/assets/image/faq/icon-minus.svg");
+            background-image: url("/assets/image/faq/icon-plus.svg");
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
@@ -1469,7 +1474,7 @@ li {
 
         &--active {
             &::after {
-                background-image: url("/assets/image/faq/icon-plus.svg");
+                background-image: url("/assets/image/faq/icon-minus.svg");
             }
         }
     }
